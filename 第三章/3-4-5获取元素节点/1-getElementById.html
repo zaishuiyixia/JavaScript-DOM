@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>getElementById获取元素</title>
+	<style>
+		p {
+			color: yellow;
+			font-family: 'arial', sans-serif;
+			font-size: 1.2em;
+		}
+
+		body {
+			color: white;
+			background-color: black;
+		}
+
+		.special {
+			font-size: italic;
+		}
+
+		#purchases {
+			border: 1px solid white;
+			background-color: #ccc;
+			padding: 1em;
+		}
+
+		#purchases li {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h1>What to buy</h1>
+	<p title="a gentle reminder">Don't forget to buy this stuff.</p>
+	<ul id="purchases">
+		<li>A tin of beans</li>
+		<li class="sale">Cheese</li>
+		<li class="sale important">Milk</li>
+	</ul>
+	<script>
+		alert(typeof document.getElementById("purchases"));  //object
+	</script>
+</body>
+</html>

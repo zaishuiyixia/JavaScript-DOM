@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>getElementsByTagName获取元素</title>
+	<style>
+		p {
+			color: yellow;
+			font-family: 'arial', sans-serif;
+			font-size: 1.2em;
+		}
+
+		body {
+			color: white;
+			background-color: black;
+		}
+
+		.special {
+			font-size: italic;
+		}
+
+		#purchases {
+			border: 1px solid white;
+			background-color: #ccc;
+			padding: 1em;
+		}
+
+		#purchases li {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h1>What to buy</h1>
+	<p title="a gentle reminder">Don't forget to buy this stuff.</p>
+	<ul id="purchases">
+		<li>A tin of beans</li>
+		<li class="sale">Cheese</li>
+		<li class="sale important">Milk</li>
+	</ul>
+	<script>
+		alert(document.getElementsByTagName("li").length);
+		for (var i = 0; i < document.getElementsByTagName("li").length; i++) {
+			console.log(document.getElementsByTagName("li")[i])
+		}
+
+		/*
+		*使用通配符"*",获取文档中所有的元素节点(获取的是元素节点)：
+		*alert(document.getElementsByTagName("*").length);
+		*/
+
+		/*
+		*获取id属性值是purchases的元素包含着多少个列表项：
+		*var shopping = document.getElementById("purchases");
+		*var items = shopping.getElementsByTagName("*");
+		*alert(items.length)
+		*/
+	</script>
+</body>
+</html>
